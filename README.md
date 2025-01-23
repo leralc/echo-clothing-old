@@ -1,67 +1,30 @@
-# Mod Overview
+# Echo's Mod - Pinned @ V1 Body
 
-This mod introduces various enhancements to the game, including additional clothing and activities.
+This repository serves an **old** version of Echo's mod, before the V2 body update, for those who prefer the V1 body.
 
-## Links
+> [!WARNING]
+> **This repository is provided as-is without any ongoing support or maintenance**. As the V1 body is no longer supported by the mod author, it is only a matter of time until it falls out of date and becomes incompatible (with new additions/changes to the mod, or the game itself).
+> 
+> **Use at your own risk, and understand that you will inevitably need to switch back to the main mod at some point in the future (things *will* start breaking).**
 
-| Description             | Link                                                                             |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| Clothing Expansion      | [Clothing Expansion](https://emdsa2.github.io/-mod/BC_Cloth2.user.js)            |
-| Action Expansion        | [Action Expansion](https://emdsa2.github.io/-mod/BC_Activity2.user.js)           |
-| Clothing Expansion Beta | [Clothing Expansion Beta](https://emdsa2.github.io/-mod/BC_Cloth2-beta.user.js)  |
-| Action Expansion Beta   | [Action Expansion Beta](https://emdsa2.github.io/-mod/BC_Activity2-beta.user.js) |
+## Usage
 
-## Installation Script
+As this is a fork of the main mod, it is *not* present in FUSAM, and you will need to either use the UserScript loader, or the bookmarklet instead.
 
-```javascript
-(function() {
-  const n = document.createElement('script');
-  n.setAttribute('type', 'text/javascript');
-  n.setAttribute('src', 'https://emdsa2.github.io/-mod/BC_Cloth2.user.js?t=' + Date.now());
-  n.onload = function() { n.remove(); };
-  document.head.appendChild(n);
-})();
-```
+> [!IMPORTANT]
+>
+> **Ensure that you do not have the original mod loaded at the same time, as they will conflict.** Specifically, you will need to disable the *clothing* part of the mod (you may use the *activity* part).
 
-wiki: https://github.com/emdsa2/-mod/wiki
+### UserScript
 
+1. Install a UserScript manager (such as [Tampermonkey](https://www.tampermonkey.net/) or [ViolentMonkey](https://violentmonkey.github.io/)).
+    - If you are on Chrome, you will need to [enable developer mode](https://www.tampermonkey.net/faq.php#Q209) for TamperMonkey to work properly.
+2. Install the UserScript by clicking [here](https://leralc.github.io/echo-v1-body/BC_Cloth2.user.js).
 
-## Add-on Menu Overview
+### Bookmarklet
 
-This add-on menu overview was provided by Nemesea.
-
-The menu of this add-on features three primary buttons:
-
-### Left Button: Creation/Text/Deletion of New Activities
-
-The left menu provides three options:
-
-- **Top**: Name of the activity + choose target with toggle icon: only you (1 person-icon) or also other people (2 persons-icon).    When it's an activity only on yourself, use the pink icon to specify if the activity is made by yourself (finger pointing left) or by other people (finger pointing right).
-
-- **Middle**: Insert the text corresponding to the activity in the big boxes, use the 3 icons to insert characters and pronouns, then save the activity.
-- Only one box when the action is only on yourself.
-- Two boxes when the action can also be done on other people: top box for the text on yourself, bottom box for the text on other people.
-- 1st icon (finger pointing left) = source character, the one doing the activity.
-- 2nd icon (finger pointing right) = target character, the one being affected by the activity.
-- 3rd icon (restroom) = possessive pronoun of the target (if there is no target, it's pronoun for the source character).
-- When clicking the Save button, you will see a red message announcing that the activity has been saved.
-
-- **Bottom**: Deletion of activities, for example, if you accidentally messed up in the middle area.    You can select an activity and delete only this one, or use the trash bin (red button) to delete all new activities.
-
-### Middle Button (Currently Not Working - WIP): Creation of New Clothes/Items
-
-### Right Button: Orgasm Counter Options
-
-You can choose to save orgasm counter or not, and you can clear it with the trash bin icon.
-
-## Additional Features
-
-The add-on also includes new items and clothes.
-
-It adds extra clothes categories in the wardrobe after the original body zones, allowing you to combine, for example, two dresses.
-
-All the new clothing, binding, and wardrobe slots are invisible to those who don't use the script.
-
-## 额外的服装槽位 和 一些bug😶
-
-Discord：https://discord.gg/K9YnNqsNKx
+1. Create a new bookmark in your browser with the following URL:
+    ```javascript
+    javascript:(function() { const n = document.createElement('script'); n.setAttribute('type', 'text/javascript'); n.setAttribute('src', 'https://leralc.github.io/echo-v1-body/BC_Cloth2.user.js? t=' + Date.now()); n.onload = function() { n.remove(); }; document.head.appendChild(n); })();
+    ```
+2. Click the bookmark whenever you want to load the mod.
