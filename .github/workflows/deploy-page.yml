@@ -49,15 +49,6 @@ jobs:
           ref: master
           clean: false
 
-      - name: Build Beta
-        run: pnpm build --configBaseURL $PAGE_URL --configBeta
-
-      - name: Checkout release
-        uses: actions/checkout@v3
-        with:
-          ref: release
-          clean: false
-
       - name: Build
         run: pnpm build --configBaseURL $PAGE_URL
 
