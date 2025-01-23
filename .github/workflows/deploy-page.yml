@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - release
-      - main
+      - master
 
 jobs:
   build:
@@ -43,10 +43,10 @@ jobs:
       - name: Build Pages
         run: pnpm page:all
 
-      - name: Checkout main
+      - name: Checkout master
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: master
           clean: false
 
       - name: Build Beta
